@@ -1,0 +1,263 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1 &2105434434804219252
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 8761543602486740331}
+  - component: {fileID: 233919340693314472}
+  - component: {fileID: 7764614184170015160}
+  - component: {fileID: 4813977258342968869}
+  - component: {fileID: 8713872204372035126}
+  m_Layer: 0
+  m_Name: Quest_Item_Audio
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &8761543602486740331
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2105434434804219252}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 4.2784386, y: -3.6414921, z: 15.948664}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &233919340693314472
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2105434434804219252}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: cbd477d44b7fed14aba1221830d6fb0d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  questListCSV: {fileID: 4900000, guid: 2163b7fc4b1e6f6449cf735763e92e98, type: 3}
+  questList: []
+--- !u!114 &7764614184170015160
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2105434434804219252}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bceae7dd77eff7145a9b8d858851e6cc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  itemListCSV: {fileID: 4900000, guid: d6f2801740a6ff64294adcb72a352054, type: 3}
+  itemList: []
+--- !u!114 &4813977258342968869
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2105434434804219252}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b72bb1f3704eab1408811f5f0ee76142, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  sounds:
+  - name: Jump
+    clip: {fileID: 8300000, guid: 56fb3112cbc30a140badd8fa99b0aa4d, type: 3}
+    volumeVariationLow: 0.09
+    volumeVariationHigh: 0.09
+    baseVolume: 4
+    pitchVariationLow: 0.13
+    pitchVariationHigh: 0.13
+    basePitch: 1.15
+  - name: Jump2
+    clip: {fileID: 8300000, guid: 68a05815560f37646abd0b073863bc0b, type: 3}
+    volumeVariationLow: 0.09
+    volumeVariationHigh: 0.08
+    baseVolume: 0
+    pitchVariationLow: 0.08
+    pitchVariationHigh: 0.08
+    basePitch: 0.89
+  - name: 'Step '
+    clip: {fileID: 8300000, guid: e8a933cc24ed3884990087a096449548, type: 3}
+    volumeVariationLow: 0.08
+    volumeVariationHigh: 0.08
+    baseVolume: 1
+    pitchVariationLow: 0.08
+    pitchVariationHigh: 0.8
+    basePitch: 1
+  - name: Goost
+    clip: {fileID: 8300000, guid: 8fd315e3ffcfb5940abb9cd1014667b5, type: 3}
+    volumeVariationLow: 0.08
+    volumeVariationHigh: 0.08
+    baseVolume: 0.25
+    pitchVariationLow: 0.08
+    pitchVariationHigh: 0.08
+    basePitch: 1
+  - name: Slide
+    clip: {fileID: 8300000, guid: 390f7844b5ec1c34e8b2ff0c1d0db7b5, type: 3}
+    volumeVariationLow: 0.08
+    volumeVariationHigh: 0.08
+    baseVolume: 0
+    pitchVariationLow: 0.08
+    pitchVariationHigh: 0.08
+    basePitch: 1
+  - name: dialogueBoxOpenSound
+    clip: {fileID: 8300000, guid: 8483bae5eb99c9b408670e39c0581442, type: 3}
+    volumeVariationLow: 0.08
+    volumeVariationHigh: 0.08
+    baseVolume: 0.5
+    pitchVariationLow: 0.08
+    pitchVariationHigh: 0.08
+    basePitch: 1
+  - name: dialogueBoxCloseSound
+    clip: {fileID: 8300000, guid: 8185a0b9bd5e9314a956ee71e6f66e06, type: 3}
+    volumeVariationLow: 0.08
+    volumeVariationHigh: 0.08
+    baseVolume: 0.5
+    pitchVariationLow: 0.08
+    pitchVariationHigh: 0.08
+    basePitch: 1
+  - name: DialogueSoundNormal
+    clip: {fileID: 8300000, guid: 8483bae5eb99c9b408670e39c0581442, type: 3}
+    volumeVariationLow: 0.08
+    volumeVariationHigh: 0.08
+    baseVolume: 0.5
+    pitchVariationLow: 0.08
+    pitchVariationHigh: 0.08
+    basePitch: 1
+  - name: grind
+    clip: {fileID: 8300000, guid: 08d1928acfa3bc94c8e7a653cf6c3cb9, type: 3}
+    volumeVariationLow: 0.08
+    volumeVariationHigh: 0.08
+    baseVolume: 1
+    pitchVariationLow: 0.08
+    pitchVariationHigh: 0.08
+    basePitch: 1
+  - name: lever
+    clip: {fileID: 8300000, guid: 142af44fa63b12346b2e35b94849da41, type: 3}
+    volumeVariationLow: 0.08
+    volumeVariationHigh: 0.08
+    baseVolume: 1
+    pitchVariationLow: 0.08
+    pitchVariationHigh: 0.08
+    basePitch: 1
+  music:
+  - name: 'Ambient '
+    clip: {fileID: 8300000, guid: 6276c157a56aa484bb1801e6a9d1c120, type: 3}
+  - name: Slums
+    clip: {fileID: 8300000, guid: 9af8ac4ed2958484da3fb0ff0c0c7474, type: 3}
+  - name: Sewer
+    clip: {fileID: 8300000, guid: d95c712936a3c8e4cb54df224db11ef6, type: 3}
+  - name: Church
+    clip: {fileID: 8300000, guid: 3308360a76fb7b44b998dc823f6716a9, type: 3}
+--- !u!82 &8713872204372035126
+AudioSource:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2105434434804219252}
+  m_Enabled: 1
+  serializedVersion: 4
+  OutputAudioMixerGroup: {fileID: 0}
+  m_audioClip: {fileID: 0}
+  m_PlayOnAwake: 1
+  m_Volume: 1
+  m_Pitch: 1
+  Loop: 0
+  Mute: 0
+  Spatialize: 0
+  SpatializePostEffects: 0
+  Priority: 128
+  DopplerLevel: 1
+  MinDistance: 1
+  MaxDistance: 500
+  Pan2D: 0
+  rolloffMode: 0
+  BypassEffects: 0
+  BypassListenerEffects: 0
+  BypassReverbZones: 0
+  rolloffCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    - serializedVersion: 3
+      time: 1
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  panLevelCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0.552
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  spreadCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  reverbZoneMixCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
