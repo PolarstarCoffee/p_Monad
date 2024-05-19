@@ -167,3 +167,113 @@ MonoBehaviour:
         m_PreInfinity: 0
         m_PostInfinity: 0
         m_RotationOrder: 0
+  - m_From: baseCamera
+    m_To: BackAlley_Cam
+    m_Blend:
+      m_Style: 1
+      m_Time: 2
+      m_CustomCurve:
+        serializedVersion: 2
+        m_Curve: []
+        m_PreInfinity: 0
+        m_PostInfinity: 0
+        m_RotationOrder: 0
+  - m_From: BackAlley_Cam
+    m_To: baseCamera
+    m_Blend:
+      m_Style: 1
+      m_Time: 1
+      m_CustomCurve:
+        serializedVersion: 2
+        m_Curve: []
+        m_PreInfinity: 0
+        m_PostInfinity: 0
+        m_RotationOrder: 0
+  - m_From: baseCamera
+    m_To: Hospital_Cam_1
+    m_Blend:
+      m_Style: 0
+      m_Time: 2
+      m_CustomCurve:
+        serializedVersion: 2
+        m_Curve: []
+        m_PreInfinity: 0
+        m_PostInfinity: 0
+        m_RotationOrder: 0
+  - m_From: Hospital_Cam_1
+    m_To: baseCamera
+    m_Blend:
+      m_Style: 0
+      m_Time: 2
+      m_CustomCurve:
+        serializedVersion: 2
+        m_Curve: []
+        m_PreInfinity: 0
+        m_PostInfinity: 0
+        m_RotationOrder: 0
+  - m_From: baseCamera
+    m_To: Hospital_Cam_2
+    m_Blend:
+      m_Style: 0
+      m_Time: 2
+      m_CustomCurve:
+        serializedVersion: 2
+        m_Curve: []
+        m_PreInfinity: 0
+        m_PostInfinity: 0
+        m_RotationOrder: 0
+  - m_From: Hospital_Cam_2
+    m_To: baseCamera
+    m_Blend:
+      m_Style: 0
+      m_Time: 2
+      m_CustomCurve:
+        serializedVersion: 2
+        m_Curve: []
+        m_PreInfinity: 0
+        m_PostInfinity: 0
+        m_RotationOrder: 0
+  - m_From: baseCamera
+    m_To: Hospital_Cam_3
+    m_Blend:
+      m_Style: 0
+      m_Time: 2
+      m_CustomCurve:
+        serializedVersion: 2
+        m_Curve: []
+        m_PreInfinity: 0
+        m_PostInfinity: 0
+        m_RotationOrder: 0
+  - m_From: Hospital_Cam_3
+    m_To: baseCamera
+    m_Blend:
+      m_Style: 0
+      m_Time: 2
+      m_CustomCurve:
+        serializedVersion: 2
+        m_Curve: []
+        m_PreInfinity: 0
+        m_PostInfinity: 0
+        m_RotationOrder: 0
+  - m_From: baseCamera
+    m_To: Hospital_Cam_4
+    m_Blend:
+      m_Style: 0
+      m_Time: 2
+      m_CustomCurve:
+        serializedVersion: 2
+        m_Curve: []
+        m_PreInfinity: 0
+        m_PostInfinity: 0
+        m_RotationOrder: 0
+  - m_From: Hospital_Cam_4
+    m_To: baseCamera
+    m_Blend:
+      m_Style: 0
+      m_Time: 2
+      m_CustomCurve:
+        serializedVersion: 2
+        m_Curve: []
+        m_PreInfinity: 0
+        m_PostInfinity: 0
+        m_RotationOrder: 0
