@@ -107,12 +107,9 @@ public class playerJumpingState : playerBaseState
         //Calculation for actual movement 
         return forwardCamera * stateMachine.InputReader.movementValue.y + rightCamera * stateMachine.InputReader.movementValue.x;
     }
-
     /// 
     /// WALL RUNNING METHODS BELOW
     /// 
-
-
     //Checks if there is a wall on either side of the player using raycasting (Checks again in wall running state)
     public void checkforWall()
     {
