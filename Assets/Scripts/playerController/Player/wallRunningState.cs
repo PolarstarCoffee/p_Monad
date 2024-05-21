@@ -116,13 +116,12 @@ public class wallRunningState : playerBaseState
 
     public IEnumerator wallJump()
     {
+        Vector3 jumpZero = new Vector3();
+        jumpZero = stateMachine.charController.velocity;
         stateMachine.exitWall = true;
         stateMachine.exitWallTimer = stateMachine.exitWallTime;
         Vector3 wallNormal = stateMachine.wallRight ? rightWallHit.normal : leftWallHit.normal;
         Vector3 forceToApplyDir = stateMachine.charController.transform.up * stateMachine.wallJumpUpForce + wallNormal * stateMachine.wallJumpUpSideForce;
-
-
-
         //Left side wall jump animation call
         if (stateMachine.wallLeft)
         {
@@ -132,12 +131,7 @@ public class wallRunningState : playerBaseState
         {
             stateMachine.Animator.CrossFadeInFixedTime(rightJumpHash, CrossFadeDuration);
         }
-
-
-
-
         //Vector 3 lerp method
-
         Vector3 initalPOS = stateMachine.charController.transform.position;
         Vector3 targetPOS = initalPOS + forceToApplyDir;
         float elapsedTime = 0f;
@@ -148,14 +142,5 @@ public class wallRunningState : playerBaseState
             elapsedTime += Time.deltaTime;
             yield return null;
         }
-        Vector3 jumpZero = new Vector3();
-
-        jumpZero = stateMachine.charController.velocity;
-        //Move(movement * stateMachine.jumpForce, Time.deltaTime);
-
-
-
-
-
     }
 }
