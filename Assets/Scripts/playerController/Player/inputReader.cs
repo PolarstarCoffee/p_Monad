@@ -16,6 +16,7 @@ public class inputReader : MonoBehaviour, Controls.IPlayerActions
     public event Action sprintEvent;
     public event Action boostEvent;
     public event Action wallRun;
+    public event Action interact;
     private bool alreadyHit = false;
     private dialogueCollisionSaver collisionSaver;
 
@@ -77,6 +78,11 @@ public class inputReader : MonoBehaviour, Controls.IPlayerActions
     {
         if (!context.performed) { return; }
         wallRun?.Invoke();
+    }
+    public void OnInteract(InputAction.CallbackContext context)
+    {
+        if(!context.performed) { return; }
+        interact.Invoke();    
     }
 
     private void convoStart()
