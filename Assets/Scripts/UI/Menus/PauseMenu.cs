@@ -15,10 +15,22 @@ public class PauseMenu : MonoBehaviour
     public CinemachineFreeLook freeLookCamera;
     private bool isOptionsMenuActive = false;
     private bool isControlsMenuActive = false;
+    public Controls inputActions;
     private void Awake()
     {
+        inputActions = new Controls();
+        //Fancy lambda expression, giving context to the action event 
+        inputActions.player.Pause.performed += ctx => pMenu();
         
-        
+    }
+    //Enable input actions
+    void OnEnable()
+    {
+        inputActions.player.Enable();
+    }
+    void OnDisable()
+    {
+        inputActions.player.Disable();
     }
 
     private void Start()
@@ -39,33 +51,34 @@ public class PauseMenu : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        //replace with input asset event binding to account for controller too 
-        if (Input.GetKeyDown(KeyCode.Escape))
-        {
-            Cursor.lockState = CursorLockMode.None;
-            Cursor.visible = true;
-            if (GameIsPaused)
-            {
-                if (isOptionsMenuActive)
-                {
-                    BackToPauseMenu();
-                }
-                else if (isControlsMenuActive) 
-                {
-                    BackFromControlsMenu();
-                }
-                else
-                {
-                    Resume();
-                }
-            }
-            else if (!isOptionsMenuActive && !isControlsMenuActive) 
-            {
-                Pause();
-            }
-        }
+       
     }
 
+
+    public void pMenu()
+    {
+        Cursor.lockState= CursorLockMode.None;
+        Cursor.visible = true;
+        if (GameIsPaused)
+        {
+            if (isOptionsMenuActive)
+            {
+                BackToPauseMenu();
+            }
+            else if (isControlsMenuActive)
+            {
+                BackFromControlsMenu();
+            }
+            else
+            {
+                Resume();
+            }
+        }
+        else if (!isOptionsMenuActive && !isControlsMenuActive)
+        {
+            Pause();
+        }
+    }
 
     public void Resume()
     {
