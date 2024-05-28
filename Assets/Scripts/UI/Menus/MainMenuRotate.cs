@@ -15,7 +15,7 @@ public class MainMenuRotate : MonoBehaviour
 
     //Input lock (Check if sphere is rotating)
     private bool isRotating = false;
-
+    public Controls controls;
 
     void Update()
     {
