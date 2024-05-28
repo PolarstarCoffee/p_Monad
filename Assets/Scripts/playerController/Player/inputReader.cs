@@ -6,7 +6,7 @@ using UnityEngine.InputSystem;
 
 public class inputReader : MonoBehaviour, Controls.IPlayerActions
 {
-    //Implemented input action asset as an interfa.ce *shift + period hotkey* 
+    //Implemented input action asset as an interface *shift + period hotkey* 
     //The inputs that unity would handle, and use our state machine to switch between states 
     //i.e. input events drive the state machine
     //if you need to write any logic that stops our player from moving, here is where you do it.
@@ -97,5 +97,9 @@ public class inputReader : MonoBehaviour, Controls.IPlayerActions
         inputActions.player.Enable();
         alreadyHit = false;
     }
-    
+
+    public void OnPause(InputAction.CallbackContext context)
+    {
+        throw new NotImplementedException();
+    }
 }

@@ -4,6 +4,7 @@ using UnityEngine;
 using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 using Cinemachine;
+using UnityEngine.InputSystem;
 
 public class PauseMenu : MonoBehaviour
 {
@@ -14,6 +15,11 @@ public class PauseMenu : MonoBehaviour
     public CinemachineFreeLook freeLookCamera;
     private bool isOptionsMenuActive = false;
     private bool isControlsMenuActive = false;
+    private void Awake()
+    {
+        
+        
+    }
 
     private void Start()
     {
@@ -33,6 +39,7 @@ public class PauseMenu : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        //replace with input asset event binding to account for controller too 
         if (Input.GetKeyDown(KeyCode.Escape))
         {
             Cursor.lockState = CursorLockMode.None;
