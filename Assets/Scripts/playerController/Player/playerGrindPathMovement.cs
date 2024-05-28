@@ -6,6 +6,7 @@ using UnityEngine;
 using UnityEngine.InputSystem;
 using UnityEngine.Splines;
 using UnityEngine.PlayerLoop;
+using UnityEngine.InputSystem.LowLevel;
 
 public class playerGrindPathMovement : playerBaseState
 {

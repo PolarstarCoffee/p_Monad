@@ -144,7 +144,7 @@ public partial class @Controls: IInputActionCollection2, IDisposable
                     ""path"": ""<Gamepad>/leftStick"",
                     ""interactions"": """",
                     ""processors"": """",
-                    ""groups"": """",
+                    ""groups"": ""Gamepad"",
                     ""action"": ""Move"",
                     ""isComposite"": false,
                     ""isPartOfComposite"": false
@@ -188,7 +188,7 @@ public partial class @Controls: IInputActionCollection2, IDisposable
                     ""path"": ""<Gamepad>/buttonEast"",
                     ""interactions"": """",
                     ""processors"": """",
-                    ""groups"": """",
+                    ""groups"": ""Gamepad"",
                     ""action"": ""Sprint"",
                     ""isComposite"": false,
                     ""isPartOfComposite"": false
@@ -199,7 +199,7 @@ public partial class @Controls: IInputActionCollection2, IDisposable
                     ""path"": ""<Mouse>/leftButton"",
                     ""interactions"": """",
                     ""processors"": """",
-                    ""groups"": """",
+                    ""groups"": ""keyboard+mouse"",
                     ""action"": ""Boost"",
                     ""isComposite"": false,
                     ""isPartOfComposite"": false
@@ -210,7 +210,7 @@ public partial class @Controls: IInputActionCollection2, IDisposable
                     ""path"": ""<Gamepad>/rightTrigger"",
                     ""interactions"": """",
                     ""processors"": """",
-                    ""groups"": """",
+                    ""groups"": ""Gamepad"",
                     ""action"": ""Boost"",
                     ""isComposite"": false,
                     ""isPartOfComposite"": false
@@ -221,7 +221,7 @@ public partial class @Controls: IInputActionCollection2, IDisposable
                     ""path"": ""<Keyboard>/e"",
                     ""interactions"": """",
                     ""processors"": """",
-                    ""groups"": """",
+                    ""groups"": ""keyboard+mouse"",
                     ""action"": ""interact"",
                     ""isComposite"": false,
                     ""isPartOfComposite"": false
@@ -232,7 +232,7 @@ public partial class @Controls: IInputActionCollection2, IDisposable
                     ""path"": ""<Gamepad>/buttonNorth"",
                     ""interactions"": """",
                     ""processors"": """",
-                    ""groups"": """",
+                    ""groups"": ""Gamepad"",
                     ""action"": ""interact"",
                     ""isComposite"": false,
                     ""isPartOfComposite"": false
@@ -243,7 +243,7 @@ public partial class @Controls: IInputActionCollection2, IDisposable
                     ""path"": ""<Keyboard>/escape"",
                     ""interactions"": """",
                     ""processors"": """",
-                    ""groups"": """",
+                    ""groups"": ""keyboard+mouse"",
                     ""action"": ""Pause"",
                     ""isComposite"": false,
                     ""isPartOfComposite"": false
@@ -254,7 +254,7 @@ public partial class @Controls: IInputActionCollection2, IDisposable
                     ""path"": ""<Gamepad>/start"",
                     ""interactions"": """",
                     ""processors"": """",
-                    ""groups"": """",
+                    ""groups"": ""Gamepad"",
                     ""action"": ""Pause"",
                     ""isComposite"": false,
                     ""isPartOfComposite"": false
