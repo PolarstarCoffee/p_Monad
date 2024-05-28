@@ -25,7 +25,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 494956549852605138}
   serializedVersion: 2
-  m_LocalRotation: {x: -0.00028670687, y: -0.000000059604645, z: -0.000000009051291, w: 1}
+  m_LocalRotation: {x: 0.08042035, y: -0.00000008940696, z: -0, w: 0.9967611}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
@@ -107,7 +107,7 @@ Transform:
   m_GameObject: {fileID: 941170018594267057}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0.00000047683716, y: 2.0997255, z: -4.905396}
+  m_LocalPosition: {x: 0.00000047683716, y: 2.924, z: -5.0000005}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -158,7 +158,7 @@ MonoBehaviour:
   m_YAxis:
     Value: 0.5
     m_SpeedMode: 0
-    m_MaxSpeed: 0
+    m_MaxSpeed: 0.95
     m_AccelTime: 0.1
     m_DecelTime: 0.1
     m_InputAxisName: Mouse Y
@@ -182,7 +182,7 @@ MonoBehaviour:
   m_XAxis:
     Value: 90
     m_SpeedMode: 0
-    m_MaxSpeed: 0
+    m_MaxSpeed: 280
     m_AccelTime: 0.1
     m_DecelTime: 0.1
     m_InputAxisName: Mouse X
@@ -299,7 +299,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2918259935260684833}
   serializedVersion: 2
-  m_LocalRotation: {x: -0.018428111, y: 0.000000059604645, z: 0.0000000018626451, w: 0.99983025}
+  m_LocalRotation: {x: 0.062324412, y: -0.000000029802319, z: -0, w: 0.99805593}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
@@ -694,8 +694,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 4928806586634734297}
   serializedVersion: 2
-  m_LocalRotation: {x: 0.1078618, y: -0.000000059604645, z: -0, w: 0.99416596}
-  m_LocalPosition: {x: 0, y: 1.1532776, z: -0.07899475}
+  m_LocalRotation: {x: 0.24684149, y: -0, z: 0.0000000074505797, w: 0.9690559}
+  m_LocalPosition: {x: 0, y: 1.5522678, z: 0.31518555}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -765,6 +765,7 @@ GameObject:
   - component: {fileID: 3962954494229420894}
   - component: {fileID: 3498030274619610915}
   - component: {fileID: 6693367878693023343}
+  - component: {fileID: 9060154113592826908}
   m_Layer: 0
   m_Name: Monad_Model_Feb_5th_Animation
   m_TagString: Player
@@ -980,6 +981,33 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   knockbackStrength: 1
   stateMachine: {fileID: 1094887378285467354}
+--- !u!54 &9060154113592826908
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6727251332903758380}
+  serializedVersion: 4
+  m_Mass: 1
+  m_Drag: 0
+  m_AngularDrag: 0.05
+  m_CenterOfMass: {x: 0, y: 0, z: 0}
+  m_InertiaTensor: {x: 1, y: 1, z: 1}
+  m_InertiaRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ImplicitCom: 1
+  m_ImplicitTensor: 1
+  m_UseGravity: 0
+  m_IsKinematic: 0
+  m_Interpolate: 0
+  m_Constraints: 112
+  m_CollisionDetection: 0
 --- !u!1 &8150712086755870115
 GameObject:
   m_ObjectHideFlags: 0
