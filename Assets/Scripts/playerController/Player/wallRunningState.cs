@@ -45,7 +45,7 @@ public class wallRunningState : playerBaseState
                 stateMachine.Animator.CrossFadeInFixedTime(rightRunHash, CrossFadeDuration);
             }
             wallRunStart();
-            if (Input.GetKeyDown(KeyCode.Space))
+            if (stateMachine.InputReader.inputActions.player.Jump.WasPressedThisFrame())
             {
                 Debug.Log("jump here");
                 stateMachine.StartCoroutine(wallJump());
