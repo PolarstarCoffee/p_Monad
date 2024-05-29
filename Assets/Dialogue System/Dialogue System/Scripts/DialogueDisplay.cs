@@ -57,6 +57,7 @@ public class DialogueDisplay : MonoBehaviour
         if (instance != null && instance != this)
             Destroy(this);
         instance = this;
+        inputActions = new Controls();
     }
 
     public static DialogueDisplay Instance()
