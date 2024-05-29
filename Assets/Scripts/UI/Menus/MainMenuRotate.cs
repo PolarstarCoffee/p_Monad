@@ -15,13 +15,17 @@ public class MainMenuRotate : MonoBehaviour
 
     //Input lock (Check if sphere is rotating)
     private bool isRotating = false;
-    public Controls controls;
-
+    public Controls inputActions;
+    private void Awake()
+    {
+        inputActions = new Controls();
+        inputActions.Enable();
+    }
     void Update()
     {
         if (!isRotating)
         {
-            if (Input.GetKeyDown(KeyCode.A))
+            if (inputActions.MainMenu.Left_Navigate.WasPressedThisFrame())
             {
                 // Start rotating the sphere 90 degrees to the left
                 StartCoroutine(RotateOverTime(sphere, Vector3.up, -rotationAmount, rotationDuration));
@@ -29,7 +33,7 @@ public class MainMenuRotate : MonoBehaviour
                 //Play Sound on "A" key press
                 AudioManager.Instance().PlaySound("A");
             }
-            else if (Input.GetKeyDown(KeyCode.D))
+            else if (inputActions.MainMenu.Right_Navigate.WasPressedThisFrame())
             {
                 // Start rotating the sphere 90 degrees to the right
                 StartCoroutine(RotateOverTime(sphere, Vector3.up, rotationAmount, rotationDuration));
