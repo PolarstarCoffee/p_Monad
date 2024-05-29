@@ -20,17 +20,17 @@ public class PauseMenu : MonoBehaviour
     {
         inputActions = new Controls();
         //Fancy lambda expression, giving context to the action event 
-        inputActions.player.Pause.performed += ctx => pMenu();
+        inputActions.UI.Pause.performed += ctx => pMenu();
         
     }
     //Enable input actions
     void OnEnable()
     {
-        inputActions.player.Enable();
+        inputActions.UI.Enable();
     }
     void OnDisable()
     {
-        inputActions.player.Disable();
+        inputActions.UI.Disable();
     }
 
     private void Start()
