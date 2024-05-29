@@ -20,17 +20,17 @@ public class PauseMenu : MonoBehaviour
     {
         inputActions = new Controls();
         //Fancy lambda expression, giving context to the action event 
-        inputActions.UI.Pause.performed += ctx => pMenu();
-      
+        inputActions.player.Pause.performed += ctx => pMenu();
+        
     }
     //Enable input actions
     void OnEnable()
     {
-        inputActions.UI.Enable();
+        inputActions.player.Enable();
     }
     void OnDisable()
     {
-        inputActions.UI.Disable();
+        inputActions.player.Disable();
     }
 
     private void Start()
@@ -57,7 +57,6 @@ public class PauseMenu : MonoBehaviour
 
     public void pMenu()
     {
-        inputActions.player.Disable();
         Cursor.lockState= CursorLockMode.None;
         Cursor.visible = true;
         if (GameIsPaused)
@@ -103,7 +102,7 @@ public class PauseMenu : MonoBehaviour
         // Apply the mapped sensitivity to the camera speed
         freeLookCamera.m_XAxis.m_MaxSpeed = mappedValueX;
         freeLookCamera.m_YAxis.m_MaxSpeed = mappedValueY; 
-        inputActions.player.Enable();
+
     }
 
     public void Pause()
@@ -115,8 +114,7 @@ public class PauseMenu : MonoBehaviour
 
         // Disable the camera input
         freeLookCamera.m_XAxis.m_MaxSpeed = 0; 
-        freeLookCamera.m_YAxis.m_MaxSpeed = 0;
-        inputActions.player.Disable();
+        freeLookCamera.m_YAxis.m_MaxSpeed = 0; 
 
     }
 

@@ -45,15 +45,17 @@ public class playerGrindPathMovement : playerBaseState
 
             movePlayerAlongRail();
             stateMachine.Animator.CrossFadeInFixedTime(grindHash, AnimatorDampTime);
-            stateMachine.InputReader.inputActions.player.Enable();
-            if (stateMachine.InputReader.inputActions.player.Jump.IsPressed())
-            {
-                jumpOffRail();
-            }
+           
         }
         //If the player presses space to jump off of the bezier curve, they switch states
         //this might not work (It does)
-        if (stateMachine.grindExit)
+        if (Input.GetKeyDown(KeyCode.Space))
+        {
+
+            jumpOffRail();
+            
+        }
+        else if (stateMachine.grindExit)
         {
             if (stateMachine.onRail)
             {
