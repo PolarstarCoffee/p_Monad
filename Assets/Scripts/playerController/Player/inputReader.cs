@@ -30,12 +30,13 @@ public class inputReader : MonoBehaviour, Controls.IPlayerActions
         //sets the callback methods (connects moreso)
         inputActions.player.SetCallbacks(this);
         inputActions.player.Enable();
+        inputActions.UI.Enable();
         DialogueDisplay.Instance().OnDialogueCompletion.AddListener(convoEnd);
     }
 
     private void Update()
     {
-        if (Input.GetKeyDown(KeyCode.E) && collisionSaver.GetLastCollidedNPC() != null)
+        if (inputActions.UI.interact.triggered && collisionSaver.GetLastCollidedNPC() != null)
         {
             collisionSaver.GetLastCollidedNPC().GetComponent<NPCDialogueManager>().StartConversation();
             convoStart();
