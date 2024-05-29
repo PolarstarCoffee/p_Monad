@@ -98,5 +98,8 @@ public class inputReader : MonoBehaviour, Controls.IPlayerActions
         alreadyHit = false;
     }
 
-   
+    public void OnPause(InputAction.CallbackContext context)
+    {
+        throw new NotImplementedException();
+    }
 }

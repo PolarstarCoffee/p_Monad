@@ -107,13 +107,13 @@ public class playerFreeLookState : playerBaseState
     }
      public void sprint()
     {
-        if (stateMachine.InputReader.inputActions.player.Sprint.triggered || stateMachine.sprintToggle == true)
+        if (Input.GetKeyDown(KeyCode.LeftShift) || stateMachine.sprintToggle == true)
         {
             stateMachine.sprintToggle = true;
             stateMachine.freeRoamMovementSpeed = stateMachine.sprintSpeed;
             stateMachine.Animator.SetFloat(freeLookSpeedHash, 1, AnimatorDampTime, Time.deltaTime);
         }
-        if (stateMachine.InputReader.inputActions.player.Sprint.WasReleasedThisFrame() || stateMachine.sprintToggle == false)
+        if (Input.GetKeyUp(KeyCode.LeftShift) || stateMachine.sprintToggle == false)
         {
             stateMachine.sprintToggle = false;
             stateMachine.freeRoamMovementSpeed = 4;
