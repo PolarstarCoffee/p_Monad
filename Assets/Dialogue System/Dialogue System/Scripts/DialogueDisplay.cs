@@ -7,6 +7,7 @@ using TMPro;
 using UnityEngine.Events;
 using System;
 using UnityEngine.UI;
+using UnityEngine.InputSystem;
 
 /*
  * This script should go on an instance of the DialogueCanvas
@@ -41,6 +42,7 @@ public class DialogueDisplay : MonoBehaviour
     public UnityEvent OnDialogueCompletion;
 
     private static DialogueDisplay instance;
+    private Controls inputActions;
 
     // text lerp in effect variables
     Mesh mesh;
@@ -71,6 +73,10 @@ public class DialogueDisplay : MonoBehaviour
 
         GetComponent<Canvas>().enabled = false;
         dialogueText.gameObject.SetActive(false);
+
+        //Setting up additonal user input 
+        inputActions.Enable();
+        
     }
 
     // Update is called once per frame
@@ -78,7 +84,7 @@ public class DialogueDisplay : MonoBehaviour
     {
         if (active)
         {
-            if (Input.GetKeyDown(KeyCode.Space) || Input.GetKeyDown(KeyCode.Mouse0))
+            if (Input.GetKeyDown(KeyCode.Space) || Input.GetKeyDown(KeyCode.Mouse0) || inputActions.UI.Continue.WasPressedThisFrame())
             {
                 if (typing)
                 {
