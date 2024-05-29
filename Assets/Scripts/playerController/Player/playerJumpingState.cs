@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using System.Diagnostics;
+using UnityEditorInternal;
 using UnityEngine;
 using Debug = UnityEngine.Debug;
 
@@ -36,11 +37,11 @@ public class playerJumpingState : playerBaseState
         faceMovementDirection(movement, deltaTime);
 
         //Sprint checks
-        if (Input.GetKeyDown(KeyCode.LeftShift))
+        if (stateMachine.InputReader.inputActions.player.Sprint.triggered)
         {
             stateMachine.sprintToggle = true;
         }
-        if (Input.GetKeyUp(KeyCode.LeftShift))
+        if (stateMachine.InputReader.inputActions.player.Sprint.WasReleasedThisFrame())
         {
             stateMachine.sprintToggle = false;
         }
