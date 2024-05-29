@@ -9,7 +9,7 @@ Material:
   m_PrefabAsset: {fileID: 0}
   m_Name: Mat_Grill_Inside
   m_Shader: {fileID: 4800000, guid: 35a500d816bc28c409f8ca20c3d0c93d, type: 3}
-  m_Parent: {fileID: 2100000, guid: 8e2e165c4987142459b6762291186b90, type: 2}
+  m_Parent: {fileID: 2100000, guid: 68ffd34cb0e533b4bb941cc0b7294872, type: 2}
   m_ModifiedSerializedProperties: 0
   m_ValidKeywords: []
   m_InvalidKeywords: []
