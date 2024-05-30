@@ -9,6 +9,7 @@ public class HoldFrameUntilButtonPress : MonoBehaviour
     private Image imageComponent;
     private int currentFrameIndex = 0;
     private bool isPaused = true;
+    public Controls inputActions = new Controls();
 
     private void Start()
     {

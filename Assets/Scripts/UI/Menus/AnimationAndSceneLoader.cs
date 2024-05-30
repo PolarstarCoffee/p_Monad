@@ -10,16 +10,18 @@ public class AnimationAndSceneLoader : MonoBehaviour
     private Image imageComponent;
     private int currentFrameIndex = 0;
     private bool isPaused = true;
+    public Controls inputActions;
 
     private void Start()
     {
         imageComponent = GetComponent<Image>();
         SetCurrentFrame();
+        inputActions = new Controls();
     }
 
     private void Update()
     {
-        if (Input.GetKeyDown(KeyCode.Return) && isPaused)
+        if (inputActions.MainMenu.Select.triggered && isPaused)
         {
             isPaused = false;
             StartCoroutine(PlayAnimation());
