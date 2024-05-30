@@ -21,7 +21,7 @@ public class AnimationAndSceneLoader : MonoBehaviour
 
     private void Update()
     {
-        if (inputActions.MainMenu.Select.triggered && isPaused)
+        if (inputActions.MainMenu.Select.WasPressedThisFrame() && isPaused)
         {
             isPaused = false;
             StartCoroutine(PlayAnimation());

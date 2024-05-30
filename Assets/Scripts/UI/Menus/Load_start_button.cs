@@ -15,6 +15,7 @@ public class HoldFrameUntilButtonPress : MonoBehaviour
     {
         imageComponent = GetComponent<Image>();
         SetCurrentFrame();
+        inputActions.MainMenu.Enable();
     }
 
     private void Update()

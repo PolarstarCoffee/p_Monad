@@ -28,6 +28,7 @@ public class DialougeStarter : MonoBehaviour
     {
         inputActions = new Controls();
         collisionSaver = GetComponent<NonPlayerDialouge>();
+        inputActions.UI.Enable();
     }
 
     // Update is called once per frame

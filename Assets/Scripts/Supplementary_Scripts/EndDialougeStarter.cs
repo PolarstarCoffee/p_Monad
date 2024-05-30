@@ -26,14 +26,15 @@ public class EndDialougeStarter : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-
+        inputActions = new Controls();
         collisionSaver = GetComponent<NonPlayerDialouge>();
+        inputActions.Enable();
     }
 
     // Update is called once per frame
     void Update()
     {
-        if (inputActions.UI.interact.triggered && !actionInProgress)
+        if (inputActions.MainMenu.Select.triggered || Input.GetKeyDown(KeyCode.Space) && !actionInProgress)
         {
 
             actionInProgress = true;

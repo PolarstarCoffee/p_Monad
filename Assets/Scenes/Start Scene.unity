@@ -347,6 +347,10 @@ PrefabInstance:
       propertyPath: dialogueCSV
       value: 
       objectReference: {fileID: 4900000, guid: 179bfaed40705924586f5dd77db41472, type: 3}
+    - target: {fileID: 451525408896302165, guid: d08ce305c66345740bf0b01644bce9fe, type: 3}
+      propertyPath: conversations.Array.size
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 1074900194400860345, guid: d08ce305c66345740bf0b01644bce9fe, type: 3}
       propertyPath: m_IsActive
       value: 0
@@ -1688,7 +1692,7 @@ MonoBehaviour:
   - {fileID: 21300000, guid: 054e48125a8632244958721c54a562c1, type: 3}
   - {fileID: 21300000, guid: 9c4f4422448510843b54950ad5b05b29, type: 3}
   - {fileID: 21300000, guid: 340c7d3b0620c4e41ab9cbaa69bb3dcd, type: 3}
-  nextSceneName: Area_1 Fixed
+  nextSceneName: Area1_Fixed
   spaceCount: 0
 --- !u!1 &1242100730
 GameObject:

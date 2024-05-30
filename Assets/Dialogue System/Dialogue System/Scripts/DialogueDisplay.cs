@@ -76,7 +76,7 @@ public class DialogueDisplay : MonoBehaviour
         dialogueText.gameObject.SetActive(false);
 
         //Setting up additonal user input 
-        inputActions.Enable();
+        inputActions.UI.Enable();
         
     }
 

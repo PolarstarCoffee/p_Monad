@@ -18,6 +18,7 @@ public class Opening_LoadScreen : MonoBehaviour
         imageComponent = GetComponent<Image>();
         SetCurrentFrame();
         inputActions = new Controls();
+        inputActions.MainMenu.Enable();
     }
 
     private void Update()
