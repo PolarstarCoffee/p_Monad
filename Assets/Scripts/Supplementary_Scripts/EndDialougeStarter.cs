@@ -34,7 +34,7 @@ public class EndDialougeStarter : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (inputActions.MainMenu.Select.triggered || Input.GetKeyDown(KeyCode.Space) && !actionInProgress)
+        if (inputActions.MainMenu.Select.WasPressedThisFrame() || Input.GetKeyDown(KeyCode.Space) && !actionInProgress)
         {
 
             actionInProgress = true;

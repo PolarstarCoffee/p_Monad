@@ -76,7 +76,7 @@ public class DialogueDisplay : MonoBehaviour
         dialogueText.gameObject.SetActive(false);
 
         //Setting up additonal user input 
-        inputActions.UI.Enable();
+        
         
     }
 
@@ -85,6 +85,7 @@ public class DialogueDisplay : MonoBehaviour
     {
         if (active)
         {
+            inputActions.UI.Enable();
             if (Input.GetKeyDown(KeyCode.Space) || Input.GetKeyDown(KeyCode.Mouse0) || inputActions.UI.Continue.WasPressedThisFrame())
             {
                 if (typing)

@@ -26,7 +26,7 @@ public class Opening_LoadScreen : MonoBehaviour
         if ((Input.GetKeyDown(KeyCode.Space) || Input.GetMouseButtonDown(0)) || inputActions.MainMenu.Select.WasPressedThisFrame() && isPaused)
         {
             spaceCount++;
-            if(spaceCount == 7) {
+            if(spaceCount == 12) {
                 isPaused = false;
                 StartCoroutine(PlayAnimation());
             }
