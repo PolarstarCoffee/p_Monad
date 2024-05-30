@@ -17,6 +17,7 @@ public class AnimationAndSceneLoader : MonoBehaviour
         imageComponent = GetComponent<Image>();
         SetCurrentFrame();
         inputActions = new Controls();
+        inputActions.MainMenu.Enable();
     }
 
     private void Update()

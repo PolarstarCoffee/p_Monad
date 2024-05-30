@@ -6,6 +6,8 @@ using UnityEngine.SceneManagement;
 
 public class ModelRotation : MonoBehaviour
 {
+    //Input action Ref
+    private Controls inputActions;
     //Camera Rotation Speed
     public float rotationSpeed = 60f;
 
@@ -35,6 +37,8 @@ public class ModelRotation : MonoBehaviour
         AudioManager.Instance().PlayMusic("MenuMusic");
         //imageComponent = GetComponent<Image>();
         //SetCurrentFrame();
+        inputActions = new Controls();
+        inputActions.MainMenu.Enable();
     }
 
     // Update is called once per frame
@@ -100,7 +104,7 @@ public class ModelRotation : MonoBehaviour
             }
 
             // Check for Enter key press
-            if (Input.GetKeyDown(KeyCode.Return) && isPaused && !actionInProgress)
+            if (inputActions.MainMenu.Select.WasPressedThisFrame() && isPaused && !actionInProgress)
             {
                 // Set the flag to indicate that the action is in progress
                 actionInProgress = true;
