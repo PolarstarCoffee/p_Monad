@@ -19,7 +19,7 @@ public class MainMenu : MonoBehaviour
 
     public void LoadMenu()
     {
-        SceneManager.LoadScene("mainMenu_TestScene");
+        SceneManager.LoadScene("mainMenu");
     }
 
     public void LoadOptions()

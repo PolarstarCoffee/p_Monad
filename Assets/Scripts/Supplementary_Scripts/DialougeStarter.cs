@@ -26,7 +26,7 @@ public class DialougeStarter : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        
+        inputActions = new Controls();
         collisionSaver = GetComponent<NonPlayerDialouge>();
     }
 

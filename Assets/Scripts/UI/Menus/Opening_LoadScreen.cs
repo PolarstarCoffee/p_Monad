@@ -11,16 +11,18 @@ public class Opening_LoadScreen : MonoBehaviour
     private int currentFrameIndex = 0;
     private bool isPaused = true;
     public int spaceCount = 0;
+    private Controls inputActions;
 
     private void Start()
     {
         imageComponent = GetComponent<Image>();
         SetCurrentFrame();
+        inputActions = new Controls();
     }
 
     private void Update()
     {
-        if ((Input.GetKeyDown(KeyCode.Space) || Input.GetMouseButtonDown(0)) && isPaused)
+        if ((Input.GetKeyDown(KeyCode.Space) || Input.GetMouseButtonDown(0)) || inputActions.MainMenu.Select.WasPressedThisFrame() && isPaused)
         {
             spaceCount++;
             if(spaceCount == 7) {

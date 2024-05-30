@@ -19,7 +19,7 @@ public class HoldFrameUntilButtonPress : MonoBehaviour
 
     private void Update()
     {
-        if (Input.GetKeyDown(KeyCode.Space) && isPaused)
+        if (Input.GetKeyDown(KeyCode.Space) || inputActions.MainMenu.Select.WasPressedThisFrame() && isPaused)
         {
             // Press the Space key to resume the animation.
             isPaused = false;
