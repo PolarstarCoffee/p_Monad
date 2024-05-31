@@ -82,7 +82,9 @@ public class PauseMenu : MonoBehaviour
 
     public void Resume()
     {
+        
         pauseMenuUi.SetActive(false);
+        inputActions.player.Enable();
         Time.timeScale = 1f;
         GameIsPaused = false;
         PlayerPrefs.Save();
@@ -110,6 +112,7 @@ public class PauseMenu : MonoBehaviour
         pauseMenuUi.SetActive(true);
         Time.timeScale = 0f;
         GameIsPaused = true;
+        inputActions.player.Disable();
         PlayerPrefs.Save();
 
         // Disable the camera input
