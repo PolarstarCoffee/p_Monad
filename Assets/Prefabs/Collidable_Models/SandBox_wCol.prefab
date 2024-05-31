@@ -73,7 +73,7 @@ PrefabInstance:
       addedObject: {fileID: 3050249566172029224}
     - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: 3fc33456b8e359a409afac581a19790a, type: 3}
       insertIndex: -1
-      addedObject: {fileID: 8628627928259757216}
+      addedObject: {fileID: 3338436058797773998}
   m_SourcePrefab: {fileID: 100100000, guid: 3fc33456b8e359a409afac581a19790a, type: 3}
 --- !u!1 &2029536438537480910 stripped
 GameObject:
@@ -101,7 +101,7 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 0.009999999, y: 0.029894164, z: 0.009999999}
   m_Center: {x: 0, y: 0.009946802, z: 0}
---- !u!114 &8628627928259757216
+--- !u!114 &3338436058797773998
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -110,9 +110,8 @@ MonoBehaviour:
   m_GameObject: {fileID: 2029536438537480910}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 25f2d294f12600844a5e1b025381c1bb, type: 3}
+  m_Script: {fileID: 11500000, guid: 98d89c3e9874e8548bf56739f4ad15fd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   rotationSpeed: 60
-  mainCamera: {fileID: 0}
-  animationFrames: []
+  direction: 0

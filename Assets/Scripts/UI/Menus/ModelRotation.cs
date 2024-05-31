@@ -108,8 +108,8 @@ public class ModelRotation : MonoBehaviour
             {
                 // Set the flag to indicate that the action is in progress
                 actionInProgress = true;
-
-
+                //Disable input action
+                inputActions.MainMenu.Disable();
                 //Play Audio Clip on Enter Pres
                 AudioManager.Instance().PlaySound("Enter");
 
