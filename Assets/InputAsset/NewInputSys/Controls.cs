@@ -475,6 +475,74 @@ public partial class @Controls: IInputActionCollection2, IDisposable
                     ""isPartOfComposite"": false
                 }
             ]
+        },
+        {
+            ""name"": ""Cursor Menu Navigation GAMEPAD"",
+            ""id"": ""50602c6c-cf52-4ac2-8925-320c59a0cf71"",
+            ""actions"": [
+                {
+                    ""name"": ""Navigate"",
+                    ""type"": ""Button"",
+                    ""id"": ""6580b9a1-b26c-4743-83bb-d7d4d10fc95e"",
+                    ""expectedControlType"": ""Button"",
+                    ""processors"": """",
+                    ""interactions"": """",
+                    ""initialStateCheck"": false
+                },
+                {
+                    ""name"": ""Select "",
+                    ""type"": ""Button"",
+                    ""id"": ""5356ee7b-d460-4a6e-9afe-3c2623853604"",
+                    ""expectedControlType"": ""Button"",
+                    ""processors"": """",
+                    ""interactions"": """",
+                    ""initialStateCheck"": false
+                },
+                {
+                    ""name"": ""Cancel"",
+                    ""type"": ""Button"",
+                    ""id"": ""48acbc3d-d31d-44bf-958f-2e4371cbadfa"",
+                    ""expectedControlType"": ""Button"",
+                    ""processors"": """",
+                    ""interactions"": """",
+                    ""initialStateCheck"": false
+                }
+            ],
+            ""bindings"": [
+                {
+                    ""name"": """",
+                    ""id"": ""4246fe95-0295-483f-a254-6029e3241b29"",
+                    ""path"": ""<Gamepad>/rightStick/left"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": ""Gamepad"",
+                    ""action"": ""Navigate"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""9a5b429a-493d-40a9-89f7-2fef3c99cb4b"",
+                    ""path"": ""<Gamepad>/buttonSouth"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": ""Gamepad"",
+                    ""action"": ""Select "",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""190f909f-a9c1-4368-9e19-a9f54472f3d5"",
+                    ""path"": ""<Gamepad>/buttonEast"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": ""Gamepad"",
+                    ""action"": ""Cancel"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                }
+            ]
         }
     ],
     ""controlSchemes"": [
@@ -524,6 +592,11 @@ public partial class @Controls: IInputActionCollection2, IDisposable
         m_MainMenu_Right_Navigate = m_MainMenu.FindAction("Right_Navigate", throwIfNotFound: true);
         m_MainMenu_Select = m_MainMenu.FindAction("Select", throwIfNotFound: true);
         m_MainMenu_Back = m_MainMenu.FindAction("Back", throwIfNotFound: true);
+        // Cursor Menu Navigation GAMEPAD
+        m_CursorMenuNavigationGAMEPAD = asset.FindActionMap("Cursor Menu Navigation GAMEPAD", throwIfNotFound: true);
+        m_CursorMenuNavigationGAMEPAD_Navigate = m_CursorMenuNavigationGAMEPAD.FindAction("Navigate", throwIfNotFound: true);
+        m_CursorMenuNavigationGAMEPAD_Select = m_CursorMenuNavigationGAMEPAD.FindAction("Select ", throwIfNotFound: true);
+        m_CursorMenuNavigationGAMEPAD_Cancel = m_CursorMenuNavigationGAMEPAD.FindAction("Cancel", throwIfNotFound: true);
     }
 
     public void Dispose()
@@ -783,6 +856,68 @@ public partial class @Controls: IInputActionCollection2, IDisposable
         }
     }
     public MainMenuActions @MainMenu => new MainMenuActions(this);
+
+    // Cursor Menu Navigation GAMEPAD
+    private readonly InputActionMap m_CursorMenuNavigationGAMEPAD;
+    private List<ICursorMenuNavigationGAMEPADActions> m_CursorMenuNavigationGAMEPADActionsCallbackInterfaces = new List<ICursorMenuNavigationGAMEPADActions>();
+    private readonly InputAction m_CursorMenuNavigationGAMEPAD_Navigate;
+    private readonly InputAction m_CursorMenuNavigationGAMEPAD_Select;
+    private readonly InputAction m_CursorMenuNavigationGAMEPAD_Cancel;
+    public struct CursorMenuNavigationGAMEPADActions
+    {
+        private @Controls m_Wrapper;
+        public CursorMenuNavigationGAMEPADActions(@Controls wrapper) { m_Wrapper = wrapper; }
+        public InputAction @Navigate => m_Wrapper.m_CursorMenuNavigationGAMEPAD_Navigate;
+        public InputAction @Select => m_Wrapper.m_CursorMenuNavigationGAMEPAD_Select;
+        public InputAction @Cancel => m_Wrapper.m_CursorMenuNavigationGAMEPAD_Cancel;
+        public InputActionMap Get() { return m_Wrapper.m_CursorMenuNavigationGAMEPAD; }
+        public void Enable() { Get().Enable(); }
+        public void Disable() { Get().Disable(); }
+        public bool enabled => Get().enabled;
+        public static implicit operator InputActionMap(CursorMenuNavigationGAMEPADActions set) { return set.Get(); }
+        public void AddCallbacks(ICursorMenuNavigationGAMEPADActions instance)
+        {
+            if (instance == null || m_Wrapper.m_CursorMenuNavigationGAMEPADActionsCallbackInterfaces.Contains(instance)) return;
+            m_Wrapper.m_CursorMenuNavigationGAMEPADActionsCallbackInterfaces.Add(instance);
+            @Navigate.started += instance.OnNavigate;
+            @Navigate.performed += instance.OnNavigate;
+            @Navigate.canceled += instance.OnNavigate;
+            @Select.started += instance.OnSelect;
+            @Select.performed += instance.OnSelect;
+            @Select.canceled += instance.OnSelect;
+            @Cancel.started += instance.OnCancel;
+            @Cancel.performed += instance.OnCancel;
+            @Cancel.canceled += instance.OnCancel;
+        }
+
+        private void UnregisterCallbacks(ICursorMenuNavigationGAMEPADActions instance)
+        {
+            @Navigate.started -= instance.OnNavigate;
+            @Navigate.performed -= instance.OnNavigate;
+            @Navigate.canceled -= instance.OnNavigate;
+            @Select.started -= instance.OnSelect;
+            @Select.performed -= instance.OnSelect;
+            @Select.canceled -= instance.OnSelect;
+            @Cancel.started -= instance.OnCancel;
+            @Cancel.performed -= instance.OnCancel;
+            @Cancel.canceled -= instance.OnCancel;
+        }
+
+        public void RemoveCallbacks(ICursorMenuNavigationGAMEPADActions instance)
+        {
+            if (m_Wrapper.m_CursorMenuNavigationGAMEPADActionsCallbackInterfaces.Remove(instance))
+                UnregisterCallbacks(instance);
+        }
+
+        public void SetCallbacks(ICursorMenuNavigationGAMEPADActions instance)
+        {
+            foreach (var item in m_Wrapper.m_CursorMenuNavigationGAMEPADActionsCallbackInterfaces)
+                UnregisterCallbacks(item);
+            m_Wrapper.m_CursorMenuNavigationGAMEPADActionsCallbackInterfaces.Clear();
+            AddCallbacks(instance);
+        }
+    }
+    public CursorMenuNavigationGAMEPADActions @CursorMenuNavigationGAMEPAD => new CursorMenuNavigationGAMEPADActions(this);
     private int m_keyboardmouseSchemeIndex = -1;
     public InputControlScheme keyboardmouseScheme
     {
@@ -820,5 +955,11 @@ public partial class @Controls: IInputActionCollection2, IDisposable
         void OnRight_Navigate(InputAction.CallbackContext context);
         void OnSelect(InputAction.CallbackContext context);
         void OnBack(InputAction.CallbackContext context);
+    }
+    public interface ICursorMenuNavigationGAMEPADActions
+    {
+        void OnNavigate(InputAction.CallbackContext context);
+        void OnSelect(InputAction.CallbackContext context);
+        void OnCancel(InputAction.CallbackContext context);
     }
 }
