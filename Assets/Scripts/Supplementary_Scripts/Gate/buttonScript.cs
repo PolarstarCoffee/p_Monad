@@ -24,6 +24,7 @@ public class buttonScript : MonoBehaviour
             AudioManager.Instance().PlaySound("lever");
             transform.RotateAround(transform.position, new Vector3(1, 0, 0), 180);
             gate.LowerGate();
+            inputActions.UI.interact.Disable();
         }
     }
 
