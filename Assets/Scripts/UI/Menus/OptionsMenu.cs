@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.EventSystems;
 using UnityEngine.UI;
 
 public class OptionsMenu : MonoBehaviour
@@ -10,6 +11,7 @@ public class OptionsMenu : MonoBehaviour
     public GameObject controlsMenuUI;
     private bool isOptionsMenuActive = false;
     private bool isControlsMenuActive = false;
+    EventSystem EventSystem;
 
    
 
@@ -26,7 +28,7 @@ public class OptionsMenu : MonoBehaviour
         controlsMenuUI.SetActive(true);
         isControlsMenuActive = true;
         optionsMenuUI.SetActive(false);
-        
+        EventSystem = EventSystem.current;  
     }
 
     public void BackFromControlsMenu()

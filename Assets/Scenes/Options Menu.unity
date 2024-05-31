@@ -4440,6 +4440,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5f48be8df1e98cb458422c8ff634cd4f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  sensitivity: {x: 1500, y: 1500}
+  bias: {x: 0, y: -1}
 --- !u!1 &2058179353
 GameObject:
   m_ObjectHideFlags: 0
@@ -4693,11 +4695,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7607636867955964280, guid: 9a6f3028186abe248b8ccdfe612559a3, type: 3}
       propertyPath: m_XAxis.m_MaxSpeed
-      value: 300.252
+      value: 340.252
       objectReference: {fileID: 0}
     - target: {fileID: 7607636867955964280, guid: 9a6f3028186abe248b8ccdfe612559a3, type: 3}
       propertyPath: m_YAxis.m_MaxSpeed
-      value: 1.250945
+      value: 1.400945
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
