@@ -19,7 +19,7 @@ public class buttonScript : MonoBehaviour
     void Update()
     {
         // Only allow the key press if the player is inside the trigger zone
-        if (isInsideTrigger && Input.GetKeyDown(KeyCode.E) || inputActions.UI.interact.WasPressedThisFrame())
+        if (isInsideTrigger && inputActions.UI.interact.WasPressedThisFrame())
         {
             AudioManager.Instance().PlaySound("lever");
             transform.RotateAround(transform.position, new Vector3(1, 0, 0), 180);
