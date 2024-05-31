@@ -25,7 +25,7 @@ public class OptionsMenu : MonoBehaviour
     {
         controlsMenuUI.SetActive(true);
         isControlsMenuActive = true;
-
+        optionsMenuUI.SetActive(false);
         
     }
 
@@ -33,6 +33,7 @@ public class OptionsMenu : MonoBehaviour
     {
         controlsMenuUI.SetActive(false);
         isControlsMenuActive = false;
+        optionsMenuUI.SetActive(true);  
 
     }
 }
