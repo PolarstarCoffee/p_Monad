@@ -2455,7 +2455,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 76c392e42b5098c458856cdf6ecaaaa1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_FirstSelected: {fileID: 1736087934}
+  m_FirstSelected: {fileID: 0}
   m_sendNavigationEvents: 1
   m_DragThreshold: 10
 --- !u!114 &1035092751
@@ -4609,6 +4609,42 @@ PrefabInstance:
       propertyPath: m_Enabled
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 1377135636906299240, guid: 9a6f3028186abe248b8ccdfe612559a3, type: 3}
+      propertyPath: m_Lens.FieldOfView
+      value: 46.67709
+      objectReference: {fileID: 0}
+    - target: {fileID: 2711553151151376756, guid: 9a6f3028186abe248b8ccdfe612559a3, type: 3}
+      propertyPath: m_FollowOffset.y
+      value: -1.045704
+      objectReference: {fileID: 0}
+    - target: {fileID: 2711553151151376756, guid: 9a6f3028186abe248b8ccdfe612559a3, type: 3}
+      propertyPath: m_FollowOffset.z
+      value: -4.460154
+      objectReference: {fileID: 0}
+    - target: {fileID: 2759486923516081565, guid: 9a6f3028186abe248b8ccdfe612559a3, type: 3}
+      propertyPath: m_Lens.FieldOfView
+      value: 46.67709
+      objectReference: {fileID: 0}
+    - target: {fileID: 3487660192412914272, guid: 9a6f3028186abe248b8ccdfe612559a3, type: 3}
+      propertyPath: m_Lens.FieldOfView
+      value: 46.67709
+      objectReference: {fileID: 0}
+    - target: {fileID: 5460900421138440747, guid: 9a6f3028186abe248b8ccdfe612559a3, type: 3}
+      propertyPath: m_FollowOffset.y
+      value: -1.045704
+      objectReference: {fileID: 0}
+    - target: {fileID: 5460900421138440747, guid: 9a6f3028186abe248b8ccdfe612559a3, type: 3}
+      propertyPath: m_FollowOffset.z
+      value: -4.460154
+      objectReference: {fileID: 0}
+    - target: {fileID: 6397409748664031461, guid: 9a6f3028186abe248b8ccdfe612559a3, type: 3}
+      propertyPath: m_FollowOffset.y
+      value: -1.045704
+      objectReference: {fileID: 0}
+    - target: {fileID: 6397409748664031461, guid: 9a6f3028186abe248b8ccdfe612559a3, type: 3}
+      propertyPath: m_FollowOffset.z
+      value: -4.460154
+      objectReference: {fileID: 0}
     - target: {fileID: 6727251332903758380, guid: 9a6f3028186abe248b8ccdfe612559a3, type: 3}
       propertyPath: m_Name
       value: Monad_Model_Feb_5th_Animation
@@ -4694,12 +4730,16 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 7607636867955964280, guid: 9a6f3028186abe248b8ccdfe612559a3, type: 3}
+      propertyPath: m_Lens.FieldOfView
+      value: 46.67709
+      objectReference: {fileID: 0}
+    - target: {fileID: 7607636867955964280, guid: 9a6f3028186abe248b8ccdfe612559a3, type: 3}
       propertyPath: m_XAxis.m_MaxSpeed
-      value: 300.252
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 7607636867955964280, guid: 9a6f3028186abe248b8ccdfe612559a3, type: 3}
       propertyPath: m_YAxis.m_MaxSpeed
-      value: 1.250945
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
