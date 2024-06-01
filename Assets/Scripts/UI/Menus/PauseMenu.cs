@@ -39,7 +39,7 @@ public class PauseMenu : MonoBehaviour
     {
         inputActions = new Controls();
         //Fancy lambda expression, giving context to the action event 
-        inputActions.UI.Pause.performed += ctx => pMenu();
+        inputActions.UI.Pause.performed += ctx => PMenu();
         
     }
     //Enable input actions
@@ -64,23 +64,26 @@ public class PauseMenu : MonoBehaviour
         // Apply the mapped sensitivity to the camera speed
         freeLookCamera.m_XAxis.m_MaxSpeed = mappedValueX;
         freeLookCamera.m_YAxis.m_MaxSpeed = mappedValueY;
-        inputActions.player.Disable();
+        
     }
 
 
     // Update is called once per frame
     void Update()
     {
-        
-        warpMouseLogic();
+     if (GameIsPaused)
+        {
+            warpMouseLogic();
+        }
+       
     }
 
 
-    public void pMenu()
+    public void PMenu()
     {
         Cursor.lockState= CursorLockMode.None;
         Cursor.visible = true;
-        
+        inputActions.player.Disable();
         if (GameIsPaused)
         {
             if (isOptionsMenuActive)
@@ -132,9 +135,10 @@ public class PauseMenu : MonoBehaviour
     public void Pause()
     {
         pauseMenuUi.SetActive(true);
+        warpMouseLogic();
         Time.timeScale = 0f;
         GameIsPaused = true;
-        inputActions.player.Disable();
+        inputActions.player.Disable();   
         PlayerPrefs.Save();
 
         // Disable the camera input
@@ -208,7 +212,7 @@ public class PauseMenu : MonoBehaviour
         //get current mouse pOS to add to the joystick movement
         mousePOS = new Vector2(Input.mousePosition.x, Input.mousePosition.y);
         //percise value for desired cursor pos
-        warpPOS = mousePOS + bias + overflow + sensitivity * Time.deltaTime * leftstick;
+        warpPOS = mousePOS + bias + overflow + sensitivity * Time.unscaledDeltaTime * leftstick;
         //keep cursor in the game screen 
         warpPOS = new Vector2(Mathf.Clamp(warpPOS.x, 0, Screen.width), Mathf.Clamp(warpPOS.y, 0, Screen.height));
         // Store floating point values so they are not lost in WarpCursorPosition (which applies FloorToInt)
