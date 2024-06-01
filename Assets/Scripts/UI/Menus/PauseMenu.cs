@@ -73,6 +73,7 @@ public class PauseMenu : MonoBehaviour
     {
      if (GameIsPaused)
         {
+            inputActions.player.Disable();
             warpMouseLogic();
         }
        
@@ -205,8 +206,15 @@ public class PauseMenu : MonoBehaviour
     }
     void warpMouseLogic()
     {
-        //Get joystick pos
-        leftstick = Gamepad.current.leftStick.ReadValue();
+        if (Gamepad.current.leftStick == null)
+        {
+            return;
+        }
+        else
+        {
+            //Get joystick pos
+            leftstick = Gamepad.current.leftStick.ReadValue();
+        }
         //prevent jitter when not using joystick
         if (leftstick.magnitude < 0.1f) return;
         //get current mouse pOS to add to the joystick movement
