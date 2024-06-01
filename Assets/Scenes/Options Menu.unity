@@ -4735,11 +4735,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7607636867955964280, guid: 9a6f3028186abe248b8ccdfe612559a3, type: 3}
       propertyPath: m_XAxis.m_MaxSpeed
-      value: 0
+      value: 290.0382
       objectReference: {fileID: 0}
     - target: {fileID: 7607636867955964280, guid: 9a6f3028186abe248b8ccdfe612559a3, type: 3}
       propertyPath: m_YAxis.m_MaxSpeed
-      value: 0
+      value: 1.212643
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []

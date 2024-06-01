@@ -26,6 +26,13 @@ public class CursorVisibilityOn : MonoBehaviour
 
     private void Update()
     {
+       warpMouseLogic();
+
+    }
+
+
+    void warpMouseLogic()
+    {
         //Get joystick pos
         leftstick = Gamepad.current.leftStick.ReadValue();
         //prevent jitter when not using joystick
@@ -41,7 +48,6 @@ public class CursorVisibilityOn : MonoBehaviour
 
         //Move cursor
         Mouse.current.WarpCursorPosition(warpPOS);
-
     }
 
 }

@@ -12,10 +12,29 @@ public class PauseMenu : MonoBehaviour
     public GameObject pauseMenuUi;
     public GameObject optionsMenuUI;
     public GameObject controlsMenuUI;
+    
     public CinemachineFreeLook freeLookCamera;
     private bool isOptionsMenuActive = false;
     private bool isControlsMenuActive = false;
     public Controls inputActions;
+
+
+
+    //ADDED ADDITONAL LOGIC FOR CURSOR MOVEMENT WITH LEFT JOYSTICK
+    [Tooltip("Higher numbers for more mouse movement on joystick press." +
+             "Warning: diagonal movement lost at lower sensitivity (<1000)")]
+    public Vector2 sensitivity = new Vector2(1500f, 1500f);
+    [Tooltip("Counteract tendency for cursor to move more easily in some directions")]
+    public Vector2 bias = new Vector2(0f, -1f);
+    //cached variables
+    Vector2 leftstick;
+    Vector2 mousePOS;
+    Vector2 warpPOS;
+    Vector2 overflow;
+
+
+
+
     private void Awake()
     {
         inputActions = new Controls();
@@ -44,14 +63,16 @@ public class PauseMenu : MonoBehaviour
         float mappedValueY = 0.5f + (sensitivity * 1.0f);
         // Apply the mapped sensitivity to the camera speed
         freeLookCamera.m_XAxis.m_MaxSpeed = mappedValueX;
-        freeLookCamera.m_YAxis.m_MaxSpeed = mappedValueY; 
+        freeLookCamera.m_YAxis.m_MaxSpeed = mappedValueY;
+        inputActions.player.Disable();
     }
 
 
     // Update is called once per frame
     void Update()
     {
-       
+        
+        warpMouseLogic();
     }
 
 
@@ -59,6 +80,7 @@ public class PauseMenu : MonoBehaviour
     {
         Cursor.lockState= CursorLockMode.None;
         Cursor.visible = true;
+        
         if (GameIsPaused)
         {
             if (isOptionsMenuActive)
@@ -176,5 +198,23 @@ public class PauseMenu : MonoBehaviour
         freeLookCamera.m_XAxis.m_MaxSpeed = 0;
         freeLookCamera.m_YAxis.m_MaxSpeed = 0;
         
+    }
+    void warpMouseLogic()
+    {
+        //Get joystick pos
+        leftstick = Gamepad.current.leftStick.ReadValue();
+        //prevent jitter when not using joystick
+        if (leftstick.magnitude < 0.1f) return;
+        //get current mouse pOS to add to the joystick movement
+        mousePOS = new Vector2(Input.mousePosition.x, Input.mousePosition.y);
+        //percise value for desired cursor pos
+        warpPOS = mousePOS + bias + overflow + sensitivity * Time.deltaTime * leftstick;
+        //keep cursor in the game screen 
+        warpPOS = new Vector2(Mathf.Clamp(warpPOS.x, 0, Screen.width), Mathf.Clamp(warpPOS.y, 0, Screen.height));
+        // Store floating point values so they are not lost in WarpCursorPosition (which applies FloorToInt)
+        overflow = new Vector2(warpPOS.x % 1, warpPOS.y % 1);
+
+        //Move cursor
+        Mouse.current.WarpCursorPosition(warpPOS);
     }
 }
