@@ -12,6 +12,8 @@ TagManager:
   - ExitButton
   - OptionsButton
   - CreditsButton
+  - gamepad
+  - keyboard
   layers:
   - Default
   - TransparentFX
