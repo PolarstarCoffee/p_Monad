@@ -5,6 +5,7 @@ using UnityEngine.UI;
 
 public class ResolutionSettings : MonoBehaviour
 {
+    private const float rate = 60f;
     public Dropdown resolutionDropdown;
 
     Resolution[] predefinedResolutions = new Resolution[]
