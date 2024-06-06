@@ -42,7 +42,7 @@ public class TV_Loading : MonoBehaviour
                 Destroy(instantiatedObj);
             }
             // Clear the list of instantiated objects
-            instantiatedObjects.Clear();
+            //instantiatedObjects.Clear();
         }
     }
 }
