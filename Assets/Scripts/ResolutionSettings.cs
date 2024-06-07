@@ -18,6 +18,7 @@ public class ResolutionSettings : MonoBehaviour
     void Start()
     {
         PopulateResolutionDropdown();
+       
     }
 
     void PopulateResolutionDropdown()
@@ -34,6 +35,7 @@ public class ResolutionSettings : MonoBehaviour
                 predefinedResolutions[i].height == Screen.currentResolution.height)
             {
                 currentResolutionIndex = i;
+                
             }
         }
 
@@ -41,6 +43,7 @@ public class ResolutionSettings : MonoBehaviour
         resolutionDropdown.AddOptions(options);
         resolutionDropdown.value = currentResolutionIndex;
         resolutionDropdown.RefreshShownValue();
+        
     }
 
     public void SetResolution(int resolutionIndex)
