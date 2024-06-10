@@ -1,2 +1,3 @@
 Quest Requirements;Item Requiremenets;Conversation ID;Dialogue;Repeat Requirements;Triggers
-~;~;#Vendor;Order up! We got the best organic cardboard in town! Come and try our award winning stew a la cardboard!;~;~
+~;~;#Vendor;The only thing that doesn't have mold on it are my cardboard boxes. How hungry are you?;~;~
+~;~;#Vendor;Wait! How hungry are you?;~;~

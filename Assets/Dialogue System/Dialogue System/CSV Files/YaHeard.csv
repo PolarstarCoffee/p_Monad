@@ -1,2 +1,3 @@
 Quest Requirements;Item Requiremenets;Conversation ID;Dialogue;Repeat Requirements;Triggers
-~;~;#YaHeard;Have you not heard of the serial killer they got running amok? Apparently he was killing patients!;~;~
+~;~;#YaHeard;I heard that serial killer was harvesting organs from discharged hospital patients.;~;~
+~;~;#YaHeard;What would he even do with the organs?;~;~

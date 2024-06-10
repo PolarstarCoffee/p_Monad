@@ -1,4 +1,4 @@
 Quest Requirements;Item Requiremenets;Conversation ID;Dialogue;Repeat Requirements;Triggers
-~;~;#RoadClosed;Road is closed.;~;~
-~;~;#RoadClosed;Do not give me that look.;~;~
-~;~;#RoadClosed;Please, just go around will ya?;~;~
+~;~;#RoadClosed;Road's closed, pardner.;~;~
+~;~;#RoadClosed;Don't give me that look.;~;~
+~;~;#RoadClosed;Please, just go 'round will ya?;~;~
