@@ -94,14 +94,14 @@ CapsuleCollider:
     serializedVersion: 2
     m_Bits: 0
   m_LayerOverridePriority: 0
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 2
-  m_Radius: 0.7219878
-  m_Height: 1.7586055
+  m_Radius: 0.7695397
+  m_Height: 1.7882861
   m_Direction: 1
-  m_Center: {x: 0.010809897, y: 0.37930274, z: -0.0048867464}
+  m_Center: {x: 0.010809898, y: 0.37930268, z: 0.29187202}
 --- !u!114 &1437229501448959713
 MonoBehaviour:
   m_ObjectHideFlags: 0

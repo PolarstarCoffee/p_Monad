@@ -1,0 +1,12 @@
+Quest Requirements;Item Requiremenets;Conversation ID;Dialogue;Repeat Requirements;Triggers
+~;~;#Convo_SickFriend;Tyson: Are you sure no one will be watching the storage room?;~;~
+~;~;#Convo_SickFriend;Lauren: I’m sure. No one was there when I was scoping it out yesterday.;~;~
+~;~;#Convo_SickFriend;Emily: I’m still not sure this is a good idea.;~;~
+~;~;#Convo_SickFriend;Emily: What if we get caught? Do we have a plan for that?;~;~
+~;~;#Convo_SickFriend;Lauren: We don’t have time to be unsure, Em. Max is dying, he needs antibiotics!;~;~
+~;~;#Convo_SickFriend;Tyson: The hospital is being strict with the meds. Max is in serious need.;~;~
+~;~;#Convo_SickFriend;Lauren: Maybe the hospital really is out of antibiotics. In that case then there’s nothing we can do.;~;~
+~;~;#Convo_SickFriend;Lauren: But there might still be some meds, those could save Max.;~;~
+~;~;#Convo_SickFriend;Tyson: We’re not going to make you join. But we need you to decide now. Are you in or are you out?;~;~
+~;~;#Convo_SickFriend;Emily: ...;~;~
+~;~;#Convo_SickFriend;Emily: I’m with you guys. Let’s rob the hospital. I'm in.;~;~

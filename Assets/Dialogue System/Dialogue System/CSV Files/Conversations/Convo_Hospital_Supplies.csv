@@ -1,0 +1,8 @@
+Quest Requirements;Item Requiremenets;Conversation ID;Dialogue;Repeat Requirements;Triggers
+~;~;#Convo_Hospital_Supplies;Naomi: Do we have any more gauze in the back?;~;~
+~;~;#Convo_Hospital_Supplies;Jae: We’re all out. We ran out yesterday.;~;~
+~;~;#Convo_Hospital_Supplies;Naomi: ...;~;~
+~;~;#Convo_Hospital_Supplies;Naomi: Shit.;~;~
+~;~;#Convo_Hospital_Supplies;Jae: We're gonna have to do another supply run soon.;~;~
+~;~;#Convo_Hospital_Supplies;Naomi: Do we really have the manpower to send people out right now?;~;~
+~;~;#Convo_Hospital_Supplies;Jae: Nope. But how else should we go about restocking?;~;~
